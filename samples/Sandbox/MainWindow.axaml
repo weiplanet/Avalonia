@@ -1,4 +1,17 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x='http://schemas.microsoft.com/winfx/2006/xaml'
         x:Class="Sandbox.MainWindow">
+    <TreeView x:Name="tr" Items="{Binding Items}"
+          SelectedItem="{Binding SelectedItem}">
+
+        <TreeView.KeyBindings>
+            <KeyBinding Command="{Binding CreateTreeItemCommand}" Gesture="Delete" />
+        </TreeView.KeyBindings>
+        <TreeView.ItemTemplate>
+            <TreeDataTemplate>
+                    <TextBlock Margin="5,0,0,0"
+                               Text="{Binding }" />
+            </TreeDataTemplate>
+        </TreeView.ItemTemplate>
+    </TreeView>
 </Window>

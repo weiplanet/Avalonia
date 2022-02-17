@@ -15,7 +15,7 @@ namespace Sandbox
         {
             if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktopLifetime)
             {
-                desktopLifetime.MainWindow = new MainWindow();
+                desktopLifetime.MainWindow = new MainWindow() { DataContext = new Class1() };
             }
         }
     }
